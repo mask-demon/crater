@@ -1,10 +1,8 @@
 CC := g++
 CPPFLAGS := -std=c++14 -Wall
-LDLIBS := `wx-config --cppflags --libs` -static
+LDLIBS := `sdl2-config --cflags --libs` -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 
 SDL_CONFIG := /mingw32/bin/sdl2-config
-
-fstar:
 
 main: main.o stage.o mymath.o handleev.o
 
